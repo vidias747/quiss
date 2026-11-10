@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="QuizLab: a simple quiz to practice HTML, CSS, and JavaScript fundamentals.">
+  <title>QuizLab | Web Development Fundamentals</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="brand" aria-label="QuizLab">
+        <span class="brand-symbol" aria-hidden="true">Q</span>
+        <span>QuizLab<span class="brand-dot">.</span></span>
+      </div>
+      <span class="header-tag">WEB FUNDAMENTALS</span>
+    </header>
+
+    <main>
+      <!-- Screen 1: Welcome -->
+      <section id="welcome-screen" class="screen card"
+               aria-labelledby="welcome-title">
+        <div class="welcome-icon" aria-hidden="true">?</div>
+        <p class="eyebrow">READY FOR A CHALLENGE?</p>
+        <h1 id="welcome-title" tabindex="-1">
+          Test Your Web Development Knowledge
+        </h1>
+        <p class="description">
+          See how well you know the basics of HTML, CSS,
+          and JavaScript. Choose one answer for each
+          question and find out your score.
+        </p>
+        <div class="quiz-info">
+          <span class="info-icon" aria-hidden="true">▤</span>
+          <span>10 Questions</span>
+          <span class="info-divider" aria-hidden="true"></span>
+          <span>Multiple choice</span>
+        </div>
+        <button id="start-button"
+                class="button button-primary button-full"
+                type="button">
+          Start Quiz <span aria-hidden="true">→</span>
+        </button>
+      </section>
+
+      <!-- Screen 2: Quiz -->
+      <section id="quiz-screen" class="screen card"
+               aria-labelledby="question-text" hidden>
+        <div class="progress-header">
+          <span id="question-counter" class="eyebrow">
+            Question 1 of 10
+          </span>
+          <span id="progress-text" class="progress-text">10%</span>
+        </div>
+
+        <div id="progress-bar" class="progress-track"
+             role="progressbar"
+             aria-label="Quiz progress"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="10"
+             aria-valuetext="Question 1 of 10">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+
+        <h1 id="question-text" class="question-title"
+            tabindex="-1"></h1>
+
+        <div id="options-container" class="options-list"
+             role="group"
+             aria-labelledby="question-text"></div>
+
+        <div class="quiz-footer">
+          <p class="help-text">Select one answer to continue.</p>
+          <button id="next-button" class="button button-primary"
+                  type="button" disabled>
+            Next Question <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Screen 3: Result -->
+      <section id="result-screen"
+               class="screen card result-screen"
+               aria-labelledby="result-title" hidden>
+        <div class="result-icon" aria-hidden="true">✓</div>
+        <p class="eyebrow">YOUR RESULTS</p>
+        <h1 id="result-title" tabindex="-1">
+          Quiz Completed!
+        </h1>
+        <p id="result-message" class="result-message"></p>
+
+        <div class="score-card">
+          <div id="score-percentage"
+               class="score-percentage">0%</div>
+          <p class="score-caption">Final Score</p>
+          <p id="score-count" class="score-count">
+            0 / 10 correct answers
+          </p>
+        </div>
+
+        <button id="restart-button"
+                class="button button-primary button-full"
+                type="button">
+          Try Again <span aria-hidden="true">↻</span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Learn a little. Level up a lot.
+    </footer>
+  </div>
+</body>
+</html>
